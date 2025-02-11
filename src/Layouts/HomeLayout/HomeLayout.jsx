@@ -1,0 +1,15 @@
+import Banner from "../../Components/Banner/Banner.jsx";
+import MeetOurPartners from "../../Components/MeetOurPartners/MeetOurPartners.jsx";
+import Newsletter from "../../Components/Newsletter/Newsletter.jsx";
+
+const HomeLayout = () => {
+    return (
+        <div className={'min-h-[calc(100vh-64px-329px)]'}>
+            <Banner></Banner>
+            <MeetOurPartners></MeetOurPartners>
+            <Newsletter></Newsletter>
+        </div>
+    );
+};
+
+export default HomeLayout;
