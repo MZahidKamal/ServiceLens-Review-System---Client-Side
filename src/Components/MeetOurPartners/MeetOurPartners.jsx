@@ -10,7 +10,7 @@ const MeetOurPartners = () => {
 
 
     return (
-        <div className="bg-gradient-to-r from-purple-900 to-indigo-900 py-16 px-4 sm:px-6 lg:px-8">
+        <div id="meet-our-partners" className="bg-gradient-to-r from-purple-900 to-indigo-900 py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-extrabold text-center text-white mb-10">
                     <span className="inline-block mr-3"><FaHandshake className="inline-block text-yellow-400"/></span>
