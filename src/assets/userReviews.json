@@ -1,0 +1,76 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "profilePic": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      "rating": 5,
+      "review": "ServiceLens has transformed how we handle customer feedback. The AI-powered insights have helped us improve our services significantly. Absolutely recommend!",
+      "position": "Business Owner",
+      "company": "TechCare Solutions"
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "profilePic": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "rating": 5,
+      "review": "The real-time analytics and dashboard features are incredible. We can now respond to customer needs faster than ever before. Game-changing platform!",
+      "position": "Service Manager",
+      "company": "Digital Dynamics"
+    },
+    {
+      "id": 3,
+      "name": "Emma Rodriguez",
+      "profilePic": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+      "rating": 4,
+      "review": "What sets ServiceLens apart is their verified review system. As a customer, I trust the feedback here more than any other platform.",
+      "position": "Regular Customer",
+      "company": "Freelance Designer"
+    },
+    {
+      "id": 4,
+      "name": "David Kim",
+      "profilePic": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      "rating": 5,
+      "review": "The customer engagement features are outstanding. We've seen a 40% increase in customer satisfaction since using ServiceLens.",
+      "position": "Customer Success Lead",
+      "company": "InnovateTech"
+    },
+    {
+      "id": 5,
+      "name": "Lisa Patel",
+      "profilePic": "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+      "rating": 5,
+      "review": "ServiceLens provides insights that we never had access to before. The sentiment analysis feature is particularly impressive.",
+      "position": "Marketing Director",
+      "company": "Growth Metrics"
+    },
+    {
+      "id": 6,
+      "name": "James Wilson",
+      "profilePic": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      "rating": 4,
+      "review": "The platform is intuitive and user-friendly. It's helped us identify and address customer pain points effectively.",
+      "position": "Operations Manager",
+      "company": "ServicePro Inc"
+    },
+    {
+      "id": 7,
+      "name": "Maria Garcia",
+      "profilePic": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce",
+      "rating": 5,
+      "review": "As a small business owner, ServiceLens has been invaluable. The insights have helped us compete with larger companies effectively.",
+      "position": "Owner",
+      "company": "Boutique Services"
+    },
+    {
+      "id": 8,
+      "name": "Thomas Anderson",
+      "profilePic": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      "rating": 5,
+      "review": "The data visualization and reporting features are exceptional. Makes it easy to track our service quality improvements over time.",
+      "position": "Analytics Lead",
+      "company": "DataDrive Solutions"
+    }
+  ]
+} 
