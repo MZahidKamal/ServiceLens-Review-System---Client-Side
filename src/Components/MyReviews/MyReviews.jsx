@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import {useState, useContext, useEffect} from 'react';
 import { FaStar, FaEdit, FaTrash, FaChevronDown, FaChevronUp, FaCogs } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import AuthContext from "../../Providers/AuthContext.jsx";
@@ -150,6 +150,12 @@ const MyReviews = () => {
     const handleReviewUpdate = async (updatedReview) => {
         await updateReviewInDatabase(updatedReview);
     };
+
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
 

@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {FaUser, FaEnvelope, FaLock, FaImage, FaCheck, FaEyeSlash, FaEye} from 'react-icons/fa';
 import AuthContext from "../../Providers/AuthContext.jsx";
@@ -102,6 +102,12 @@ const Registration = () => {
             navigate('/auth/sign_in');
         }
     };
+
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     return (

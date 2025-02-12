@@ -85,6 +85,12 @@ const SignIn = () => {
     }, [navigate, user]);
 
 
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
     return (
         <div className="min-h-[calc(100vh-64px-329px)] flex items-center justify-center bg-gradient-to-br from-[#8E44AD] to-[#3498DB] p-4">
             <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-xl">

@@ -71,6 +71,12 @@ const UpdateCompanyModal = ({ isOpen, onClose, company, onUpdate }) => {
     };
 
 
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
     return (
         <AnimatePresence>
             {isOpen && (

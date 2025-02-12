@@ -1,6 +1,6 @@
 import {FaEnvelope, FaPen} from 'react-icons/fa';
 import {Link} from "react-router-dom";
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import AuthContext from "../../Providers/AuthContext.jsx";
 
 
@@ -8,6 +8,12 @@ const UserProfile = () => {
 
 
     const {user} = useContext(AuthContext);
+
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     return (

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaEnvelope, FaLock, FaRedo, FaEye, FaEyeSlash } from 'react-icons/fa';
 
@@ -75,6 +75,12 @@ const ResetPassword = () => {
             }
         }
     };
+
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     return (

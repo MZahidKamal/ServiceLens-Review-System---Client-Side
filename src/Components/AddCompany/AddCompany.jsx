@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import { FaBuilding, FaGlobe, FaUpload, FaPen } from 'react-icons/fa';
 import {useNavigate} from "react-router-dom";
 import useCompaniesLoader from "../../CustomHooks/useCompaniesLoader.jsx";
@@ -78,6 +78,12 @@ const AddCompany = () => {
             navigate('/add_new_service');
         }
     };
+
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     return (

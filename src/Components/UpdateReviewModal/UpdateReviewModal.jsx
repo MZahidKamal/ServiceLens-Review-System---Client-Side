@@ -27,6 +27,12 @@ const UpdateReviewModal = ({ isOpen, onClose, review, onUpdate }) => {
     };
 
 
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
     return (
         <AnimatePresence>
             {isOpen && (

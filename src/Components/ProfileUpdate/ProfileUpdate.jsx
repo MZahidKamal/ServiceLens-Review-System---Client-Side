@@ -63,6 +63,12 @@ const ProfileUpdate = () => {
     };
 
 
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
     return (
         <div className="min-h-[calc(100vh-64px-329px)] bg-gradient-to-br from-[#8E44AD] to-[#3498DB] flex items-center justify-center p-4">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-4xl w-full">

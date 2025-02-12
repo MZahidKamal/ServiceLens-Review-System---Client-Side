@@ -1,4 +1,4 @@
-import {useState, useMemo} from "react"
+import {useState, useMemo, useEffect} from "react"
 import {Link} from "react-router-dom"
 import {FaStar, FaDollarSign, FaArrowRight, FaTag} from "react-icons/fa"
 import useServicesLoader from "../../CustomHooks/useServicesLoader"
@@ -23,6 +23,11 @@ const Services = () => {
     const handleCategoryChange = (category) => {
         setSelectedCategory(category)
     }
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">

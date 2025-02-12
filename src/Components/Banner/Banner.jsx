@@ -98,6 +98,11 @@ const Banner = () => {
         navigate('/auth/sign_in');
     };
 
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="relative h-[calc(100vh-64px)] overflow-hidden bg-black">
             {/* Morphing Background */}

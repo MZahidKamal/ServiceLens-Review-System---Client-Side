@@ -81,6 +81,12 @@ const MyServices = () => {
     }
 
 
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-indigo-900 to-purple-900 p-4 md:p-8">
             <div className="max-w-7xl mx-auto">

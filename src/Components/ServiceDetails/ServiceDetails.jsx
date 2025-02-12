@@ -3,6 +3,7 @@ import { FaStar, FaUserCircle, FaCalendarAlt, FaPlusCircle } from 'react-icons/f
 import useServicesLoader from '../../CustomHooks/useServicesLoader';
 import useCompaniesLoader from '../../CustomHooks/useCompaniesLoader';
 import useReviewsLoader from '../../CustomHooks/useReviewsLoader';
+import {useEffect} from "react";
 
 
 const ServiceDetails = () => {
@@ -17,6 +18,12 @@ const ServiceDetails = () => {
     const service = services.find(service => service._id === serviceId);
     const company = service ? companies.find(company => company._id === service.companyId) : null;
     const serviceReviews = reviews.filter(review => review.serviceId === serviceId);
+
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     if (!service) {

@@ -63,6 +63,11 @@ const AddService = () => {
         }
     }
 
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="min-h-[calc(100vh-64px-329px)] bg-gradient-to-br from-[#1A237E] to-[#0D47A1] p-4 md:p-8">
             <div className="max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden">

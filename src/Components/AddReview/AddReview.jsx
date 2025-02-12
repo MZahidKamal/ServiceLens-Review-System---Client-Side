@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch, FaPlus, FaStar, FaComments, FaBuilding, FaCogs } from 'react-icons/fa';
 import useCompaniesLoader from "../../CustomHooks/useCompaniesLoader.jsx";
@@ -97,6 +97,12 @@ const AddReview = () => {
             navigate('/my_reviews');
         }
     };
+
+
+    /* SCROLL TO THE TOP OF THE PAGE WHEN THE COMPONENT LOADS. */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     return (
