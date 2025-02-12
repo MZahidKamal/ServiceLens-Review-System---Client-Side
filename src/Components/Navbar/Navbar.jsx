@@ -8,7 +8,12 @@ const Navbar = () => {
 
 
     const NavButtonsBeforeSignIn = [
-        { to: "/", icon: FaHome, text: "Home" },
+        { 
+            to: "/", 
+            icon: FaHome, 
+            text: "Home",
+            onClick: () => handleNavigation('/')
+        },
         { to: "/services", icon: FaCog, text: "Services" },
         { to: "/auth/registration", icon: FaUserPlus, text: "Register" },
         { to: "/auth/sign_in", icon: FaSignInAlt, text: "Sign In" }
@@ -16,7 +21,12 @@ const Navbar = () => {
 
 
     const NavButtonsAfterSignIn = [
-        { to: "/", icon: FaHome, text: "Home" },
+        { 
+            to: "/", 
+            icon: FaHome, 
+            text: "Home",
+            onClick: () => handleNavigation('/')
+        },
         { to: "/services", icon: FaCogs, text: "Services" },
         { to: "/add_new_service", icon: FaPlusCircle, text: "Add Service" },
         { to: "/add_new_review", icon: FaPlusCircle, text: "Add Review" },
@@ -47,36 +57,70 @@ const Navbar = () => {
         }
     }
 
+    const handleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
 
     return (
         <nav className="bg-[#8E44AD] shadow-lg sticky top-0 z-50">
             <div className="container mx-auto px-4 lg:px-0">
                 <div className="flex items-center justify-between h-16">
-                    <Link to="/" className="flex items-center space-x-2">
+                    <button 
+                        onClick={() => handleNavigation('/')}
+                        className="flex items-center space-x-2"
+                    >
                         <FaStarHalfAlt className="text-[#E67E22] text-3xl" />
-                        <span className="text-[#F4F6F7] font-bold text-4xl tracking-tight">Service<span className="text-[#3498DB]">Lens</span></span>
-                    </Link>
+                        <span className="font-bold text-2xl tracking-tight">
+                            Service<span className="text-[#3498DB]">Lens</span>
+                        </span>
+                    </button>
 
                     <div className="hidden lg:flex items-center space-x-4">
                         {!user && NavButtonsBeforeSignIn.map((link, index) => (
-                            <Link
-                                key={index}
-                                to={link.to}
-                                className="text-[#F4F6F7] hover:bg-[#3498DB] hover:text-[#F4F6F7] px-3 py-2 rounded-md text-base transition duration-300 ease-in-out flex items-center space-x-1">
-                                <link.icon />
-                                <span>{link.text}</span>
-                            </Link>
+                            link.onClick ? (
+                                <button
+                                    key={index}
+                                    onClick={link.onClick}
+                                    className="text-[#F4F6F7] hover:bg-[#3498DB] hover:text-[#F4F6F7] px-3 py-2 rounded-md text-base transition duration-300 ease-in-out flex items-center space-x-1"
+                                >
+                                    <link.icon />
+                                    <span>{link.text}</span>
+                                </button>
+                            ) : (
+                                <Link
+                                    key={index}
+                                    to={link.to}
+                                    className="text-[#F4F6F7] hover:bg-[#3498DB] hover:text-[#F4F6F7] px-3 py-2 rounded-md text-base transition duration-300 ease-in-out flex items-center space-x-1"
+                                >
+                                    <link.icon />
+                                    <span>{link.text}</span>
+                                </Link>
+                            )
                         ))}
                         {user && (
                             <>
                                 {NavButtonsAfterSignIn.map((link, index) => (
-                                    <Link
-                                        key={index}
-                                        to={link.to}
-                                        className="text-[#F4F6F7] hover:bg-[#3498DB] hover:text-[#F4F6F7] px-3 py-2 rounded-md text-base transition duration-300 ease-in-out flex items-center space-x-1">
-                                        <link.icon />
-                                        <span>{link.text}</span>
-                                    </Link>
+                                    link.onClick ? (
+                                        <button
+                                            key={index}
+                                            onClick={link.onClick}
+                                            className="text-[#F4F6F7] hover:bg-[#3498DB] hover:text-[#F4F6F7] px-3 py-2 rounded-md text-base transition duration-300 ease-in-out flex items-center space-x-1"
+                                        >
+                                            <link.icon />
+                                            <span>{link.text}</span>
+                                        </button>
+                                    ) : (
+                                        <Link
+                                            key={index}
+                                            to={link.to}
+                                            className="text-[#F4F6F7] hover:bg-[#3498DB] hover:text-[#F4F6F7] px-3 py-2 rounded-md text-base transition duration-300 ease-in-out flex items-center space-x-1"
+                                        >
+                                            <link.icon />
+                                            <span>{link.text}</span>
+                                        </Link>
+                                    )
                                 ))}
                                 <div className="relative">
                                     <button

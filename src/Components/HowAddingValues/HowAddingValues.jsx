@@ -1,6 +1,6 @@
 const HowAddingValues = () => {
     return (
-        <div className="bg-gradient-to-br from-[#1A237E] via-[#311B92] to-[#4A148C] py-16">
+        <div id="how-adding-values" className="bg-gradient-to-br from-[#1A237E] via-[#311B92] to-[#4A148C] py-16">
             {/* First Section - How ServiceLens is Different */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
